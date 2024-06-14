@@ -74,7 +74,7 @@ export default function Transactions() {
           variant="contained"
           color="primary"
           startIcon={<FileDownload />}
-          sx={{ height: "100%", borderRadius: "5px" }}
+          sx={{ height: "100%", borderRadius: "5px", outline: "none" }}
         >
           Export
         </Button>
