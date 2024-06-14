@@ -5,6 +5,10 @@ import { getUser } from "./utils/auth";
 import SignIn from "./pages/SignIn";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
+import Inventory from "./pages/Inventory";
+import DashBoard from "./pages/DashBoard";
+import Orders from "./pages/Orders";
+import Transactions from "./pages/Transactions";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +21,12 @@ const router = createBrowserRouter([
       }
       return null;
     },
+    children: [
+      { path: "/", element: <DashBoard /> },
+      { path: "/inventory", element: <Inventory /> },
+      { path: "/orders", element: <Orders /> },
+      { path: "/transactions", element: <Transactions /> },
+    ],
   },
   { path: "sign-in", element: <SignIn /> },
   { path: "sign-up", element: <SignUp /> },
